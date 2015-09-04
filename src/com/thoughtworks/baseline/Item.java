@@ -22,7 +22,7 @@ public class Item {
         if(that.getClass() != getClass())
             return false;
         Item thatItem = (Item) that;
-        if(thatItem.itemName.equals(itemName) && thatItem.quantity == (quantity) && thatItem.price == price)
+        if(thatItem.itemName.equals(itemName) && thatItem.quantity == (quantity) && thatItem.price == price && isImported == thatItem.isImported)
             return true;
         return false;
     }
