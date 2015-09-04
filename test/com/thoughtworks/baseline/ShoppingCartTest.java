@@ -13,6 +13,6 @@ public class ShoppingCartTest {
         items.add("1 music CD at 14.99");
         items.add("1 chocolate bar at 0.85");
         ShoppingCart testShoppingCart = new ShoppingCart(items);
-        assertEquals(0.0, testShoppingCart.calculateTotal(), 0);
+        assertEquals(28.33, testShoppingCart.calculateTotal(), 0.001);
     }
 }
