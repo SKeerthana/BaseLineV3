@@ -4,21 +4,14 @@ import java.util.ArrayList;
 
 //contains the list of input items
 public class ShoppingCart {
-    private ArrayList<String> items;
+    private ArrayList<Item> items;
 
-    public ShoppingCart(ArrayList<String> items) {
+    public ShoppingCart(ArrayList<Item> items) {
         this.items = items;
     }
 
     public double calculateTotal() {
         double total = 0;
-        for (String item : items) {
-            total += extractTotalCostFromInputString(item);
-        }
         return total;
-    }
-
-    private double extractTotalCostFromInputString(String item) {
-        return Double.parseDouble(item.substring(item.lastIndexOf(" ") + 1));
     }
 }
