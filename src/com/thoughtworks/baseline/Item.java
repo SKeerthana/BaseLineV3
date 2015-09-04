@@ -20,7 +20,7 @@ public class Item {
     @Override
     public boolean equals(Object that) {
         if(that.getClass() != getClass())
-            return true;
-        return false;
+            return false;
+        return true;
     }
 }
