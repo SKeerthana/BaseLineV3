@@ -27,13 +27,6 @@ public class ItemTest {
     }
 
     @Test
-    public void shouldReturnTrueIfItemNameIsSame() {
-        Item item1 = new Item("book", 1, 10, false);
-        Item item2 = new Item("book", 12, 101, true);
-        assertEquals(item1, item2);
-    }
-
-    @Test
     public void shouldReturnFalseIfItemNameIsDifferent() {
         Item item1 = new Item("book", 1, 10, false);
         Item item2 = new Item("book22", 12, 101, true);
@@ -41,8 +34,15 @@ public class ItemTest {
     }
 
     @Test
-    public void shouldReturnTruIfItemNameAndQuantityIsSame() {
+    public void shouldReturnTrueIfItemNameAndQuantityIsSame() {
         Item item1 = new Item("book", 1, 10, false);
+        Item item2 = new Item("book", 1, 101, true);
+        assertEquals(item1, item2);
+    }
+
+    @Test
+    public void shouldReturnFalseIfQuantityIsDifferent() {
+        Item item1 = new Item("book", 12, 10, false);
         Item item2 = new Item("book", 1, 101, true);
         assertNotEquals(item1, item2);
     }
