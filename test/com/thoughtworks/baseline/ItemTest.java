@@ -25,4 +25,11 @@ public class ItemTest {
         Item item1 = new Item("book", 1, 10, false);
         assertNotEquals(item1, "string");
     }
+
+    @Test
+    public void shouldReturnTrueIfItemNameIsSame() {
+        Item item1 = new Item("book", 1, 10, false);
+        Item item2 = new Item("book", 12, 101, true);
+        assertEquals(item1, item2);
+    }
 }
