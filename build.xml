@@ -2,8 +2,8 @@
 
 <project name="Baseline" default="runjUnit" basedir=".">
 
-    <property name="project.name" value="Calculator"/>
-    <property name="package.name" value="com.thoughtworks.calculator"/>
+    <property name="project.name" value="BaseLineV3"/>
+    <property name="package.name" value="com.thoughtworks.baseline"/>
 
     <target name="build" depends="clean">
         <mkdir dir="out"/>
